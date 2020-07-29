@@ -27,7 +27,7 @@ def wishMe():
     else:
         speak("Good Evening sir!")
 
-    speak("hi i am nitesh")
+    speak("hi i am baymax ,your assistant.")
     speak( "what do  you want me do ? ")
 
 def takeCommand():
@@ -54,8 +54,9 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('rohanrajput446@gmail.com', 'your-password')
-    server.sendmail('rohanrajput446@gmail.com', to, content)
+    server.login('xxxxxxxxx@email.com', 'your-password')
+    #set accordingly your mail id and password 
+    server.sendmail('xxxxxxxxxxx@email.com', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -85,6 +86,7 @@ if __name__ == "__main__":
 
         elif 'play music' in query:
             music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            #set your music directory 
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
